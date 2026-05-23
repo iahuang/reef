@@ -5,6 +5,7 @@ import Coral from "./Coral";
 import BrainCoral from "./BrainCoral";
 import FanCoral from "./FanCoral";
 import Fish from "./Fish";
+import Jellyfish from "./Jellyfish";
 import { TANK_SIZE } from "./worldOffset";
 
 // Absolute Ys (in this group's local frame) shared by the water and the
@@ -41,6 +42,7 @@ export default function Scene({ fishCount, onFishSample }: Props) {
             <BrainCoral size={TANK_SIZE} waterY={WATER_Y} variantCount={4} />
             <FanCoral size={TANK_SIZE} waterY={WATER_Y} variantCount={5} />
             <Fish surfaceY={WATER_Y} count={fishCount} onSample={onFishSample} />
+            <Jellyfish surfaceY={WATER_Y} count={30} />
             <Water size={TANK_SIZE} surfaceY={WATER_Y} baseY={TERRAIN_BASE_Y} />
         </group>
     );
